@@ -1,5 +1,6 @@
 ## target 
 
+OS: Raspberry Pi OS  
 DE: Xfce4  
 WM: Xfwm4  
 Theme: dracula  
