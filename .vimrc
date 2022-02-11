@@ -84,7 +84,9 @@ Plug 'preservim/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
+colorscheme dracula
 
