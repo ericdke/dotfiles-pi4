@@ -222,3 +222,8 @@ ZSH_HIGHLIGHT_STYLES[default]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 
 source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
+
+alias ga='git add '
+alias gc='git commit -m '
+alias ca='config add '
+alias cc='config commit -m '

@@ -85,6 +85,11 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'dracula/vim', { 'as': 'dracula' }
+  
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -93,3 +98,11 @@ colorscheme dracula
 nnoremap Y "+y
 vnoremap Y "+y
 nnoremap yY ^"+y$
+
+map `` <Nop>
+map `a <Nop>
+map `0 <Nop>
+map `" <Nop>
+map `. <Nop>
+set nofoldenable
+let g:snipMate = { 'snippet_version' : 1 }
