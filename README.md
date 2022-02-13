@@ -8,13 +8,12 @@ Icons: Papirus-Dark
 
 ## terminal addons
 
-p10k: theme pour la ligne de commande
+p10k: theme pour la ligne de commande  
 dracula: theme pour le terminal xfce
 
 ## tmux plugins
 
 tpm: gestionnaire de plugins  
-sensible  
 resurrect: pour reload la dernière config tmux  
 dracula: theme
 
@@ -23,9 +22,8 @@ dracula: theme
 vim-plug: gestionnaire de plugins  
 vim-polyglot: syntax coloration  
 nerdtree: navigation filesystem  
-tabular  
 markdown-preview  
-dracula: theme
+dracula: theme  
 snipmate: gestionnaire de snippets
 
 ## reference
