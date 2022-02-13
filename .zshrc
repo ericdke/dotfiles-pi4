@@ -8,35 +8,6 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-
-
-
-
-# ALIASES
-
-alias ls='ls --color=auto'
-alias ll='ls -lah'
-alias vz='vim ~/.zshrc'
-alias rz='source ~/.zshrc'
-alias please='sudo $(fc -ln -1)'
-alias config='/usr/bin/git --git-dir=/home/pi/.cfg/ --work-tree=/home/pi'
-alias gadd='git add'
-alias gacm='git commit -m'
-alias cadd='config add'
-alias cacm='config commit -m'
-
-
-
-# FUNCTIONS
-
-myip() {
-  ip addr | grep "inet " | grep -v " 127." | awk '{print $2}'
-}
-
-
-
-
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -240,3 +211,26 @@ ZSH_HIGHLIGHT_STYLES[default]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 
 source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
+
+# ALIASES
+
+alias ls='exa --color=always --group-directories-first'
+alias ll='exa -al --color=always --group-directories-first'
+alias lt='exa -aT --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
+alias vz='vim ~/.zshrc'
+alias rz='source ~/.zshrc'
+alias please='sudo $(fc -ln -1)'
+alias config='/usr/bin/git --git-dir=/home/pi/.cfg/ --work-tree=/home/pi'
+alias gadd='git add'
+alias gacm='git commit -m'
+alias cadd='config add'
+alias cacm='config commit -m'
+
+
+
+# FUNCTIONS
+
+myip() {
+  ip addr | grep "inet " | grep -v " 127." | awk '{print $2}'
+}
