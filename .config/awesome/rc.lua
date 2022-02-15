@@ -52,7 +52,7 @@ end
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.init("/home/pi/.config/awesome/theme.lua")
 
-beautiful.useless_gap = 4
+--beautiful.useless_gap = 4
 --beautiful.gap_single_client = true
 
 -- This is used later as the default terminal and editor to run.
@@ -304,6 +304,17 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
+
+
+
+    awful.key({ modkey,           }, ",", function () awful.spawn("pcmanfm") end,
+              {description = "open pcmanfm", group = "launcher"}),
+
+    awful.key({ modkey,           }, ":", function () awful.spawn("firefox") end,
+              {description = "open firefox", group = "launcher"}),
+
+
+
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
