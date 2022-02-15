@@ -44,11 +44,6 @@ set nocursorline
 set splitbelow
 set splitright
 
-" Enable syntax highlighting
-syntax enable 
-colorscheme dracula
-set background=dark
-
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -87,6 +82,11 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 call plug#end()
+
+" Enable syntax highlighting
+syntax enable 
+colorscheme dracula
+set background=dark
 
 " Uncomment both lines for transparent background
 "hi! Normal ctermbg=NONE guibg=NONE
