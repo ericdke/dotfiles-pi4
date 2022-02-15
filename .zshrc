@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
-export PATH=$HOME/.rbenv/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/src/scripts:$PATH
 eval "$(rbenv init -)"
 
 
@@ -306,7 +306,8 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
 alias tb='nc termbin.com 9999'		  # echo yolo | tb
-
+alias j='jrnl'
+alias cat='batcat'
 
 # FUNCTIONS
 
