@@ -554,7 +554,20 @@ globalkeys = mytable.join(
     awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey }, "x",
+    awful.key({ altkey }, "q", function ()
+            os.execute(string.format("dmenu_run -i -fn 'Monospace' -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
+            beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
+        end,
+        {description = "show dmenu", group = "launcher"}),
+ 
+
+    --awful.key({ altkey }, "Space", function ()
+     --       os.execute(string.format("rofi -show %s -theme %s",
+      --      'run', 'dmenu'))
+      --  end,
+      --  {description = "show rofi", group = "launcher"}),
+
+    awful.key({ modkey, "Shift" }, "x",
               function ()
                   awful.prompt.run {
                     prompt       = "Run Lua code: ",
