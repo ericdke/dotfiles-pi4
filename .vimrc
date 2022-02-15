@@ -1,9 +1,5 @@
 " Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabkey
-set smarttab
-
+set expandtab smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -12,12 +8,9 @@ set tabstop=4
 filetype plugin on
 filetype indent on
 
-
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-
-
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -36,10 +29,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-
-" Enable syntax highlighting
-syntax enable 
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -50,6 +39,15 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 "set noswapfile
+set nowritebackup
+set nocursorline
+set splitbelow
+set splitright
+
+" Enable syntax highlighting
+syntax enable 
+colorscheme dracula
+set background=dark
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -78,31 +76,34 @@ let g:mkdp_refresh_slow=1
 let g:mkdp_markdown_css='home/ed/.vim/github-markdown.css'
 
 call plug#begin()
-
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'dracula/vim', { 'as': 'dracula' }
-  
+Plug 'dracula/vim', { 'as': 'dracula' } 
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-
 call plug#end()
 
-colorscheme dracula
+" Uncomment both lines for transparent background
+"hi! Normal ctermbg=NONE guibg=NONE
+"hi! Nontext ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
+" Yank to clipboard
 nnoremap Y "+y
 vnoremap Y "+y
 nnoremap yY ^"+y$
 
+" Let's avoid accidental triggers
+nnoremap Q <nop>
 map `` <Nop>
 map `a <Nop>
 map `0 <Nop>
 map `" <Nop>
 map `. <Nop>
+
 set nofoldenable
 let g:snipMate = { 'snippet_version' : 1 }
